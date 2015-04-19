@@ -21,22 +21,22 @@ public class User implements Serializable {
 	@GeneratedValue
 	@Column(name = "user_id")
 	private int userId;
-	
+
 	@Column(name = "email")
 	private String email;
-	
+
 	@Column(name = "password")
 	private String password;
-	
+
 	@Column(name = "name")
 	private String name;
-	
+
 	@Column(name = "authority")
 	private String authority;
-	
+
 	@Column(name = "enabled")
 	private boolean enabled;
-	
+
 	@Column(name = "photo")
 	private String photo;
 
@@ -147,3 +147,8 @@ public class User implements Serializable {
 	}
 
 }
+
+/**
+ * xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+ * layout:decorator="layouts/main">
+ */

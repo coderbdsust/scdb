@@ -27,7 +27,7 @@ public class HomeController {
 		List<User> userList = userRepository.findAll();
 		System.out.println(userList);
 		
-		model.addAttribute("users",userList);
+		model.addAttribute("allUsers",userList);
 		return "user";
 	}
 }

@@ -4,9 +4,12 @@
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
 	layout:decorator="layouts/main">
 
+
 <head>
 
 <title>Board</title>
+<link rel="stylesheet" href="webjars//carousel.css"
+	th:href="@{/lib/css/carousel.css}" />
 <link rel="stylesheet" href="lib/css/carousel.css"
 	th:href="@{/lib/css/carousel.css}" />
 
@@ -14,26 +17,30 @@
 
 <body>
 	<div layout:fragment="content">
-		<div class="container"></div>
+		<br /> <br /> <br />
+
 		<div class="container">
-			<table>
-				<thead>
-					<tr>
-						<th>Id</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Role</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="user, iterationStatus : ${users}">
-						<td th:text="${user.userId}"></td>
-						<td th:text="${user.name}"></td>
-						<td th:text="${user.email}"></td>
-						<td th:text="${user.authority}"></td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Role</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr th:each="user : ${allUsers}">
+							<td th:text="${user.userId}"></td>
+							<td th:text="${user.name}"></td>
+							<td th:text="${user.email}"></td>
+							<td th:text="${user.authority}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 	</div>
 </body>
