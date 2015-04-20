@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layouts/main">
+
+
+<head>
+
+<title>Event Handler</title>
+<link rel="stylesheet" href="webjars//carousel.css"
+	th:href="@{/lib/css/carousel.css}" />
+<link rel="stylesheet" href="lib/css/carousel.css"
+	th:href="@{/lib/css/carousel.css}" />
+
+</head>
+
+<body>
+	<div layout:fragment="content">
+		<div class="container-fluid">
+			<br /> <br /> <br />
+			<section class="container">
+				<div class="container-page">
+					<div class="col-md-6">
+						<h3 class="dark-grey">Create Event</h3>
+
+						<div class="form-group col-lg-12">
+							<label>Event Title</label> <input type="" name=""
+								class="form-control" id="" value="" />
+						</div>
+
+						<div class="form-group col-lg-12">
+						
+							<div class="col-lg-6 col-sm-6 col-md-6">
+							
+									<input type="date" class="form-control" name="eventStartDate" id="eventStartDate" />
+							
+							</div>
+							
+							<div class="col-lg-6  col-sm-6 col-md-6">
+			
+									<input type="time" class="form-control" name="eventStartTime" id="eventStartTime"/>
+					
+							</div>
+
+						</div>
+
+						<div class="form-group col-lg-6">
+							<label>Event End Time</label> <input type="date"
+								name="eventEndDate" class="form-control" id="eventEndDate" /> <input
+								type="time" name="eventEndTime" class="form-control"
+								id="eventEndTime" />
+						</div>
+
+						<div class="form-group col-lg-12">
+							<label>Total Team Members</label> <input type=""
+								name="eventTeamSize" class="form-control" id="eventTeamSize" />
+						</div>
+
+						<div class="col-sm-12">
+							<input type="checkbox" class="checkbox" name="regNeed" />
+							Registration Need
+						</div>
+
+						<div class="col-sm-12">
+							<button type="submit" class="btn btn-primary">Register</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+</body>
+</html>

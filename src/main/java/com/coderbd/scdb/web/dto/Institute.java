@@ -15,7 +15,8 @@ public class Institute implements Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 1L;
+
+	private static final long serialVersionUID = -3092170634354936933L;
 
 	@Id
 	@GeneratedValue
